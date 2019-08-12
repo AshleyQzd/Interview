@@ -1,0 +1,82 @@
+ */
+public class LionProblems {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner read = new Scanner(System.in);
+        int option;
+
+        do {
+            System.out.println("");
+            System.out.println("Bienvenido al menú");
+            System.out.println("1) Analizador Léxico");
+            System.out.println("2) Capicúas");
+            System.out.println("3) Exit");
+            System.out.println("Elige una opción:");
+            option = read.nextInt();
+      
+            switch (option) {
+                case 1:
+                    System.out.println("Bienvenido al Analizador Léxico");
+
+                    System.out.println("Escribe un número#:");
+                    int coor11 = read.nextInt();
+                    System.out.println("Escribe un número#:");
+                    int coor12 = read.nextInt();
+                    System.out.println("Escribe una palabra@:");
+                    String palabra1 = read.next();
+                    System.out.println("");
+                    System.out.println("Escribe un número#:");
+                    int coor21 = read.nextInt();
+                    System.out.println("Escribe un número#:");
+                    int coor22 = read.nextInt();
+                    System.out.println("Escribe una palabra@:");
+                    String palabra2 = read.next();
+                    System.out.println("");
+                    System.out.println("Escribe un número#:");
+                    int coor31 = read.nextInt();
+                    System.out.println("Escribe un número#:");
+                    int coor32 = read.nextInt();
+                    System.out.println("Escribe una palabra@:");
+                    String palabra3 = read.next();
+
+                    System.out.println("Coordenadas:");
+                    System.out.println("(" + coor11 + "," + coor12 + ")" + " " + palabra1);
+                    System.out.println("(" + coor21 + "," + coor22 + ")" + " " + palabra2);
+                    System.out.println("(" + coor31 + "," + coor32 + ")" + " " + palabra3);
+
+                    break;
+                case 2:
+                    System.out.println("Bienvenido a  Capicuás");
+                    System.out.println("Escribe un número:");
+                    int n1=read.nextInt();
+                    
+                    //Utilicé un buffer de cadena para poderla utilizar como método junto a "reverse" y esto con la intención de que el 
+                    //numero pueda cambiar como es requerido en dicho problema de "Capicuás".
+                   int nuevoNum = Integer.parseInt(new StringBuffer(String.valueOf(n1)).reverse().toString());
+                    
+                    System.out.println("Numero nuevo");
+                    System.out.println(nuevoNum);
+                    System.out.println("Capicúa");
+                    int capicúa=n1+nuevoNum;
+                    System.out.println(capicúa);
+                    //Siendo sincera no entendí muy claro los ejemplos finales presentados en el problema , pero igual seguí las instrucciones 
+                    //requeridas por ustedes así como me base en el ejemplo principal donde mostraban que era una capicúa
+                    System.out.println("No entendí lo de las interacciones, lo siento :("); 
+                   break;
+                
+                case 3:  
+                    System.out.println("Gracias!");
+                    break;
+                default:
+                    System.out.println("Escribe una opción correcta:");
+                    break;
+            }
+        } while (option != 3);
+        
+    }
+
+}
